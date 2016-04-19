@@ -71,7 +71,11 @@ public class IterativeMath implements Math {
     } // fac
 
     public int pow(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
+        int sum = 1;
+        for(int x =0; i <rhs; i++){
+        	sum=mul(lhs,sum);
+        }
+        return sum;
     } // pow
 
     public static void main(String[] args){
@@ -80,6 +84,6 @@ public class IterativeMath implements Math {
     	System.out.println(i.sub(100,1));
     	System.out.println(i.mul(2,2));
     	System.out.println(i.div(100,2));
-    	System.out.println(i.fac(3));
+    	System.out.println("power"+ i.pow(3,5));
     }
 } // IterativeMath
