@@ -1,5 +1,7 @@
 package cs1302.calc;
 
+import cs1302.calc.Calculator;
+
 import javafx.fxml.FXMLLoader;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -18,18 +20,25 @@ public class Driver extends Application {
     @Override
     public void start(Stage primaryStage) {
 
-	Parent root = null;
+//	Parent root = null;
 
-	try {
-	    root = FXMLLoader.load(getClass().getResource("/calc.fxml"));
-	} catch (IOException e) {
-	    System.out.println(e);
-	    System.exit(1);
-	} // try
+	// try {
+	//     root = FXMLLoader.load(getClass().getResource("/calc.fxml"));
+	// } catch (IOException e) {
+	//     System.out.println(e);
+	//     System.exit(1);
+	// } // try
 
-        primaryStage.setTitle("CalcFX!");
-	primaryStage.setScene(new Scene(root, 640, 480));
-        primaryStage.show();
+ //        primaryStage.setTitle("CalcFX!");
+	// primaryStage.setScene(new Scene(root, 640, 480));
+ //        primaryStage.show();
+
+    Calculator root = new Calculator();
+    Scene scene = new Scene(root);
+    primaryStage.setScene(scene);
+    primaryStage.show();
+    primaryStage.setResizable(false);
+
 
     } // start
 

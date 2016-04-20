@@ -10,8 +10,8 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
 import javafx.scene.control.Label;
-public class calcButton extends Button{
-	public calcButton(Label text, String symbol,Color color, int x, int y ) {
+public class DigitButton extends Button{
+	public DigitButton(Label text, String symbol,double x, double y ) {
 		super(symbol);
 		//this.setBackground(new Background( new BackgroundFill(Color.BLACK, null, null) ) );
 		this.setOnAction( event -> {
