@@ -7,6 +7,7 @@ public class calcButton extends Button{
 	public calcButton(String symbol) {
 		super(symbol);
 		this.symbol = symbol;
+		this.setPrefSize(100,5);
 	}
 	public static void main(String[] args) {
 	}
