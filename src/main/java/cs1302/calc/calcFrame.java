@@ -8,10 +8,11 @@ import javafx.scene.paint.Color;
 import javafx.geometry.Orientation;
 import javafx.geometry.Insets;
 import javafx.scene.text.Text;
+import javafx.scene.control.Label;
 
 public class calcFrame extends FlowPane{
 	//constructor
-	public calcFrame(Text text){
+	public calcFrame(Label text){
 		super(Orientation.HORIZONTAL);
 		this.setVgap(20);
 		this.setHgap(10);

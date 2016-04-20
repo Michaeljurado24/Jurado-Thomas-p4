@@ -14,8 +14,13 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.scene.control.Label;
+import javafx.scene.text.Font;
 
 public class Construction extends Application{
+
+
+public  Label coolLabel = new Label();
 
 	
 private Group firstButtonSet;
@@ -73,7 +78,7 @@ private VBox allButtons = new VBox(3);
 //----------------------------------
 
 	public Construction(){
-		
+		coolLabel.setFont(new Font(100));		
 		Button zero;
 		Button one;	
 		Button two;	
@@ -118,7 +123,7 @@ private VBox allButtons = new VBox(3);
 	}
 
 	public calcFrame getFlowPane(){
-		return (new calcFrame(input) );
+		return (new calcFrame(coolLabel) );
 	}
 	//old code
 	public VBox buttonLayout(){ /* The containers firstButtonSet and secondButtonSet will be returned in a VBox.*/
@@ -288,6 +293,7 @@ private VBox allButtons = new VBox(3);
 
 
 
+
 		//old code
 		VBox theButtons = new VBox();
 		theButtons = c.buttonLayout();
@@ -304,7 +310,8 @@ private VBox allButtons = new VBox(3);
 		r.setX(0);
 		r.setY(0);
 		//root.getChildren().addAll(r,theButtons);
-		root.getChildren().addAll(r, theButtons2);
+		System.out.println("ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+		root.getChildren().addAll(r, theButtons2, c.coolLabel);
 		Scene s = new Scene(root, 600,600,Color.rgb(190,190,190,.5));
 		
 		primaryStage.setScene(s);
