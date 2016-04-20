@@ -64,11 +64,16 @@ private Button hideBinary = new Button("  Hide Binary  ");
 //----------------------------------
 
 /* container nodes and other variables and objects used for returning the results of the methods found within this class.*/
+
+
+
+
 private VBox allButtons = new VBox(3);
 //private FlowPane flow = new FlowPane();
 //----------------------------------
 
 	public Construction(){
+		
 		Button zero;
 		Button one;	
 		Button two;	
@@ -112,7 +117,10 @@ private VBox allButtons = new VBox(3);
 		Text txtAnswer = new Text ("6");
 	}
 
-
+	public calcFrame getFlowPane(){
+		return (new calcFrame(input) );
+	}
+	//old code
 	public VBox buttonLayout(){ /* The containers firstButtonSet and secondButtonSet will be returned in a VBox.*/
 		firstButtonSet = new Group();
 		secondButtonSet = new Group();
@@ -276,16 +284,27 @@ private VBox allButtons = new VBox(3);
 		FlowPane flow = new FlowPane();
 		
 		Rectangle r = new Rectangle(600,150);
+
+
+
+
+		//old code
 		VBox theButtons = new VBox();
-		
 		theButtons = c.buttonLayout();
-		r.setFill(Color.rgb(255, 255, 255, .9));
-		
-		root.getChildren().addAll(r,theButtons);
-		r.setX(0);
-		r.setY(0);
 		theButtons.setLayoutX(110);
 		theButtons.setLayoutY(320);
+
+		//new code
+		FlowPane theButtons2 = c.getFlowPane();
+		theButtons2.setLayoutX(110);
+		theButtons2.setLayoutY(320);
+		
+
+		r.setFill(Color.rgb(255, 255, 255, .9));
+		r.setX(0);
+		r.setY(0);
+		//root.getChildren().addAll(r,theButtons);
+		root.getChildren().addAll(r, theButtons2);
 		Scene s = new Scene(root, 600,600,Color.rgb(190,190,190,.5));
 		
 		primaryStage.setScene(s);

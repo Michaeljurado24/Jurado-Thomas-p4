@@ -1,0 +1,48 @@
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mInitial source changes: [0m
+[0m[[0mdebug[0m] [0m	removed:Set()[0m
+[0m[[0mdebug[0m] [0m	added: Set()[0m
+[0m[[0mdebug[0m] [0m	modified: Set(/home/ugrads/jurado/Jurado-Thomas-p4/src/main/java/cs1302/calc/calcButton.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated products: Set()[0m
+[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
+[0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/home/ugrads/jurado/Jurado-Thomas-p4/src/main/java/cs1302/calc/calcButton.java)[0m
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
+[0m[[0mdebug[0m] [0m	product: Set()[0m
+[0m[[0mdebug[0m] [0m	binary dep: Set()[0m
+[0m[[0mdebug[0m] [0m	external source: Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/home/ugrads/jurado/Jurado-Thomas-p4/src/main/java/cs1302/calc/calcButton.java)[0m
+[0m[[0minfo[0m] [0mCompiling 1 Java source to /home/ugrads/jurado/Jurado-Thomas-p4/target/scala-2.10/classes...[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@75b2c4e2 directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 0.470129833 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.230252458 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 0.704748708 s[0m
+[0m[[0mdebug[0m] [0mInvalidating /home/ugrads/jurado/Jurado-Thomas-p4/src/main/java/cs1302/calc/calcButton.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /home/ugrads/jurado/Jurado-Thomas-p4/src/main/java/cs1302/calc/calcButton.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/home/ugrads/jurado/Jurado-Thomas-p4/src/main/java/cs1302/calc/calcButton.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/home/ugrads/jurado/Jurado-Thomas-p4/src/main/java/cs1302/calc/calcButton.java)[0m
+[0m[[0mdebug[0m] [0mThe /home/ugrads/jurado/Jurado-Thomas-p4/src/main/java/cs1302/calc/calcButton.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	setOnAction.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /home/ugrads/jurado/Jurado-Thomas-p4/src/main/java/cs1302/calc/calcButton.java[0m
+[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /home/ugrads/jurado/Jurado-Thomas-p4/src/main/java/cs1302/calc/calcFrame.java[0m
+[0m[[0mdebug[0m] [0mNew invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set(/home/ugrads/jurado/Jurado-Thomas-p4/src/main/java/cs1302/calc/calcFrame.java)[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/home/ugrads/jurado/Jurado-Thomas-p4/src/main/java/cs1302/calc/calcFrame.java)[0m
+[0m[[0mdebug[0m] [0mIncluding /home/ugrads/jurado/Jurado-Thomas-p4/src/main/java/cs1302/calc/Construction.java by /home/ugrads/jurado/Jurado-Thomas-p4/src/main/java/cs1302/calc/calcFrame.java[0m
+[0m[[0mdebug[0m] [0mIncluding /home/ugrads/jurado/Jurado-Thomas-p4/src/main/java/cs1302/calc/testDriver.java by /home/ugrads/jurado/Jurado-Thomas-p4/src/main/java/cs1302/calc/calcFrame.java[0m
+[0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set(/home/ugrads/jurado/Jurado-Thomas-p4/src/main/java/cs1302/calc/calcFrame.java)[0m
+[0m[[0minfo[0m] [0mCompiling 1 Java source to /home/ugrads/jurado/Jurado-Thomas-p4/target/scala-2.10/classes...[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@75b2c4e2 directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 0.064054803 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.039591015 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 0.105072982 s[0m
+[0m[[0mdebug[0m] [0mNew invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m
+[0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set()[0m
