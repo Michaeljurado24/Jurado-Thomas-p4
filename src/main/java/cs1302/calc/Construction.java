@@ -57,8 +57,8 @@ private Button equal = new Button("   =   ");
 /* Less-than, X-variable, Navigation, Hide, and Recursion Buttons */
 private Button lessThan = new Button("<");
 private Button xVar = new Button("X");
-private Button left = new Button("←");
-private Button right = new Button("→");
+private Button left = new Button("<-");
+private Button right = new Button("->");
 private Button useRecursion = new Button("Use Recusion");
 private Button hideBinary = new Button("  Hide Binary  ");
 //----------------------------------
