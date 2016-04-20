@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/home/ugrads/jurado/Jurado-Thomas-p4/}jurado-thomas-p4...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/C:/Users/micha/workspace/Jurado-Thomas-p4/}jurado-thomas-p4...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: cs1302-calculator#cs1302-calculator_2.10;1.1[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -163,19 +163,19 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.5!scala-reflect.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.5!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 328ms :: artifacts dl 11ms[0m
-[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 compile produced in /home/ugrads/jurado/Jurado-Thomas-p4/target/resolution-cache/reports/cs1302-calculator-cs1302-calculator_2.10-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 runtime produced in /home/ugrads/jurado/Jurado-Thomas-p4/target/resolution-cache/reports/cs1302-calculator-cs1302-calculator_2.10-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 test produced in /home/ugrads/jurado/Jurado-Thomas-p4/target/resolution-cache/reports/cs1302-calculator-cs1302-calculator_2.10-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 provided produced in /home/ugrads/jurado/Jurado-Thomas-p4/target/resolution-cache/reports/cs1302-calculator-cs1302-calculator_2.10-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 optional produced in /home/ugrads/jurado/Jurado-Thomas-p4/target/resolution-cache/reports/cs1302-calculator-cs1302-calculator_2.10-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 compile-internal produced in /home/ugrads/jurado/Jurado-Thomas-p4/target/resolution-cache/reports/cs1302-calculator-cs1302-calculator_2.10-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 runtime-internal produced in /home/ugrads/jurado/Jurado-Thomas-p4/target/resolution-cache/reports/cs1302-calculator-cs1302-calculator_2.10-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 test-internal produced in /home/ugrads/jurado/Jurado-Thomas-p4/target/resolution-cache/reports/cs1302-calculator-cs1302-calculator_2.10-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 plugin produced in /home/ugrads/jurado/Jurado-Thomas-p4/target/resolution-cache/reports/cs1302-calculator-cs1302-calculator_2.10-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 sources produced in /home/ugrads/jurado/Jurado-Thomas-p4/target/resolution-cache/reports/cs1302-calculator-cs1302-calculator_2.10-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 docs produced in /home/ugrads/jurado/Jurado-Thomas-p4/target/resolution-cache/reports/cs1302-calculator-cs1302-calculator_2.10-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 pom produced in /home/ugrads/jurado/Jurado-Thomas-p4/target/resolution-cache/reports/cs1302-calculator-cs1302-calculator_2.10-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 scala-tool produced in /home/ugrads/jurado/Jurado-Thomas-p4/target/resolution-cache/reports/cs1302-calculator-cs1302-calculator_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (328ms resolve - 11ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1201ms :: artifacts dl 47ms[0m
+[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 compile produced in C:\Users\micha\workspace\Jurado-Thomas-p4\target\resolution-cache\reports\cs1302-calculator-cs1302-calculator_2.10-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 runtime produced in C:\Users\micha\workspace\Jurado-Thomas-p4\target\resolution-cache\reports\cs1302-calculator-cs1302-calculator_2.10-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 test produced in C:\Users\micha\workspace\Jurado-Thomas-p4\target\resolution-cache\reports\cs1302-calculator-cs1302-calculator_2.10-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 provided produced in C:\Users\micha\workspace\Jurado-Thomas-p4\target\resolution-cache\reports\cs1302-calculator-cs1302-calculator_2.10-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 optional produced in C:\Users\micha\workspace\Jurado-Thomas-p4\target\resolution-cache\reports\cs1302-calculator-cs1302-calculator_2.10-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 compile-internal produced in C:\Users\micha\workspace\Jurado-Thomas-p4\target\resolution-cache\reports\cs1302-calculator-cs1302-calculator_2.10-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 runtime-internal produced in C:\Users\micha\workspace\Jurado-Thomas-p4\target\resolution-cache\reports\cs1302-calculator-cs1302-calculator_2.10-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 test-internal produced in C:\Users\micha\workspace\Jurado-Thomas-p4\target\resolution-cache\reports\cs1302-calculator-cs1302-calculator_2.10-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 plugin produced in C:\Users\micha\workspace\Jurado-Thomas-p4\target\resolution-cache\reports\cs1302-calculator-cs1302-calculator_2.10-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 sources produced in C:\Users\micha\workspace\Jurado-Thomas-p4\target\resolution-cache\reports\cs1302-calculator-cs1302-calculator_2.10-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 docs produced in C:\Users\micha\workspace\Jurado-Thomas-p4\target\resolution-cache\reports\cs1302-calculator-cs1302-calculator_2.10-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 pom produced in C:\Users\micha\workspace\Jurado-Thomas-p4\target\resolution-cache\reports\cs1302-calculator-cs1302-calculator_2.10-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for cs1302-calculator#cs1302-calculator_2.10;1.1 scala-tool produced in C:\Users\micha\workspace\Jurado-Thomas-p4\target\resolution-cache\reports\cs1302-calculator-cs1302-calculator_2.10-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (1201ms resolve - 47ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
