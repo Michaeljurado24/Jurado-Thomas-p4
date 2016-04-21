@@ -4,6 +4,7 @@ package cs1302.calc;
 import cs1302.calc.DigitButton;
 import cs1302.calc.InputLabel;
 import cs1302.calc.ClearButton;
+import cs1302.calc.EqualsButton;
 
 //formating
 import javafx.scene.layout.FlowPane;
@@ -20,13 +21,13 @@ import javafx.scene.control.Label;
 public class Calculator extends FlowPane{
 	//attributes
 	private InputLabel input;
-	private Label output;
-
+	private InputLabel output;
 	//
 	private final double WIDTH = 700;
 	private final double HEIGHT = 30;
 	private final double BUTTONHEIGHT = 5;
 	private final double BUTTONWIDTH = 100;
+
 
 	public void setFormat(){
 		this.setVgap(20);
@@ -42,6 +43,7 @@ public class Calculator extends FlowPane{
 
 		//attrivute instantiation
 		input = new InputLabel(WIDTH);//starts out blank
+		output = new InputLabel(WIDTH);
 		//formating
 		this.setFormat();
 
@@ -62,14 +64,15 @@ public class Calculator extends FlowPane{
 		DigitButton right = new DigitButton(input, ">>", BUTTONWIDTH, BUTTONHEIGHT);
 
 		//special buttons
-		ClearButton clearButton = new ClearButton(input, BUTTONWIDTH, BUTTONHEIGHT);
-
+		ClearButton clear = new ClearButton(input, BUTTONWIDTH, BUTTONHEIGHT);
+		EqualsButton equals = new EqualsButton(input, output, BUTTONWIDTH, BUTTONHEIGHT);
 		this.getChildren().addAll(
 		  						input,
-				numButtons[7], numButtons[8], numButtons[9], div, fac, clearButton,
+		  						output,
+				numButtons[7], numButtons[8], numButtons[9], div, fac, clear,
 				numButtons[4], numButtons[5], numButtons[6], mul, pow, left, right,
 				numButtons[1], numButtons[2], numButtons[3], minus,
-				numButtons[0]
+				numButtons[0], equals
 		);
 		
 	}

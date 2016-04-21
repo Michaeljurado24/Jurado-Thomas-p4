@@ -5,10 +5,10 @@ import javafx.scene.control.Label;
 
 public class ClearButton extends Button{
 
-		public ClearButton(Label text, double x, double y) {
+		public ClearButton(Label input, double x, double y) {
 			super("X");
 			this.setOnAction( event -> {
-					text.setText("");
+					input.setText("");
 			});
 			this.setPrefSize(x, y);
 		}
