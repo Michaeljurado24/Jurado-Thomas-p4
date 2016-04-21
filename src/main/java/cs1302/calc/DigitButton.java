@@ -15,8 +15,9 @@ public class DigitButton extends Button{
 		super(symbol);
 		//this.setBackground(new Background( new BackgroundFill(Color.BLACK, null, null) ) );
 		this.setOnAction( event -> {
-			System.out.println("made it this far;");
-			text.setText(symbol);
+			String oldText = text.getText();
+			String newText = oldText+ symbol;
+			text.setText(newText);
 		});
 
 		this.setPrefSize(x,y);
