@@ -8,7 +8,6 @@ public class EqualsButton extends Button{
 	public EqualsButton(Label input, Label output, double width, double height){
 		super("=");
 		this.setOnAction( event -> {
-			input.setText("");
 			/*method calls go here */
 
 			output.setText("result");

@@ -3,9 +3,10 @@ package cs1302.calc;
 //class imports
 import cs1302.calc.DigitButton;
 import cs1302.calc.InputLabel;
+import cs1302.calc.OutputLabel;
 import cs1302.calc.ClearButton;
 import cs1302.calc.EqualsButton;
-
+import cs1302.calc.BackspaceButton;
 //formating
 import javafx.scene.layout.FlowPane;
 import javafx.scene.paint.Color;
@@ -21,13 +22,28 @@ import javafx.scene.control.Label;
 public class Calculator extends FlowPane{
 	//attributes
 	private InputLabel input;
-	private InputLabel output;
+	private OutputLabel output;
 	//
 	private final double WIDTH = 700;
 	private final double HEIGHT = 30;
 	private final double BUTTONHEIGHT = 5;
 	private final double BUTTONWIDTH = 100;
 
+
+	//constructo
+	public Calculator(){
+		super(Orientation.HORIZONTAL);
+
+		//attrivute instantiation
+		this.setLabels();
+
+		//formating
+		this.setFormat();
+
+		//Digit Buttons
+		this.addButtons();
+		
+	}
 
 	public void setFormat(){
 		this.setVgap(20);
@@ -36,18 +52,12 @@ public class Calculator extends FlowPane{
 		this.setPrefWrapLength(WIDTH);
 	} // setFormat
 
- 
-	//constructo
-	public Calculator(){
-		super(Orientation.HORIZONTAL);
-
-		//attrivute instantiation
+	public void setLabels(){
 		input = new InputLabel(WIDTH);//starts out blank
-		output = new InputLabel(WIDTH);
-		//formating
-		this.setFormat();
-
-		//Digit Buttons
+		output = new OutputLabel(WIDTH);
+	} //set Labels
+ 
+ 	public void addButtons(){
 		DigitButton[] numButtons = new DigitButton[10];
 		for(int i = 0; i< 10; i++) {
 			numButtons[i] = new DigitButton(input, Integer.toString(i),BUTTONWIDTH, 
@@ -66,14 +76,16 @@ public class Calculator extends FlowPane{
 		//special buttons
 		ClearButton clear = new ClearButton(input, BUTTONWIDTH, BUTTONHEIGHT);
 		EqualsButton equals = new EqualsButton(input, output, BUTTONWIDTH, BUTTONHEIGHT);
+		BackspaceButton backspace = new BackspaceButton(input, BUTTONWIDTH, BUTTONHEIGHT);
+
 		this.getChildren().addAll(
 		  						input,
 		  						output,
-				numButtons[7], numButtons[8], numButtons[9], div, fac, clear,
+				numButtons[7], numButtons[8], numButtons[9], div, fac,backspace, clear,
 				numButtons[4], numButtons[5], numButtons[6], mul, pow, left, right,
 				numButtons[1], numButtons[2], numButtons[3], minus,
 				numButtons[0], equals
 		);
-		
-	}
+ 	}
+
 }

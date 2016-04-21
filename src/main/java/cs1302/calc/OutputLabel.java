@@ -4,11 +4,11 @@ package cs1302.calc;
 import javafx.scene.control.Label;
 import javafx.scene.text.Font;
 
-public class InputLabel extends Label{
+public class OutputLabel extends Label{
 
-	public InputLabel(double width){
+	public OutputLabel(double width){
 			super("");
 			this.setPrefWidth(width);
-			this.setFont(new Font(40));
+			this.setFont(new Font(70));
 	}
 }
