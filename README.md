@@ -12,8 +12,6 @@ Old Structure
 
 New Structure
 
-
-//individualButtons
 					Driver
 					^
 					|
