@@ -10,18 +10,17 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
 import javafx.scene.control.Label;
-public class DigitButton extends Button{
-	public DigitButton(Label text, String symbol,double x, double y ) {
+public class BinaryButton extends Button{
+	public BinaryButton(Label result,Label outputInBinary, String symbol,double x, double y ) {
 		super(symbol);
-		//this.setBackground(new Background( new BackgroundFill(Color.BLACK, null, null) ) );
+		
 		this.setOnAction( event -> {
-			String oldText = text.getText();
-			String newText = oldText+ symbol;
-			text.setText(newText);
+		/* Call the binary function on output Label here 
+		 * and save the result to the secondary Label ouputInBinary*/
 		});
 
 		this.setPrefSize(x,y);
-		this.setStyle("-fx-base: #4d4d4d");
+		this.setStyle("-fx-base: #8080ff");
 	}
 	
 

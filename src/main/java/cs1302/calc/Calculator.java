@@ -23,13 +23,14 @@ public class Calculator extends FlowPane{
 	//attributes
 	private InputLabel input;
 	private OutputLabel output;
+	private OutputInBinaryLabel outputInBinary;
 	
 	//Represent the Actual WIdth of the Window
-	private final double WIDTH = 700;
+	private final double WIDTH = 400; // Changed from 700 to 400
 
 	//These represent the desired Height and Width of the normal button
 	private final double BUTTONHEIGHT = 5;
-	private final double BUTTONWIDTH = 100;
+	private final double BUTTONWIDTH = 50;// Changed from 100 to 50
 
 
 	//constructo
@@ -77,16 +78,19 @@ public class Calculator extends FlowPane{
 
 		//special buttons
 		ClearButton clear = new ClearButton(input, BUTTONWIDTH, BUTTONHEIGHT);
-		EqualsButton equals = new EqualsButton(input, output, BUTTONWIDTH, BUTTONHEIGHT);
+		EqualsButton equals = new EqualsButton(input, output, (BUTTONWIDTH*2.17), BUTTONHEIGHT);
 		BackspaceButton backspace = new BackspaceButton(input, BUTTONWIDTH, BUTTONHEIGHT);
+		backspace.setStyle("-fx-base: #ff751a");
+		BinaryButton hideBinaryButton = new BinaryButton(output, outputInBinary,"Hide Binary",(BUTTONWIDTH*3.4), BUTTONHEIGHT);
+		RecursionButton recursionButton = new RecursionButton("Use Recursion", (BUTTONWIDTH*3.4), BUTTONHEIGHT);
 
 		this.getChildren().addAll(
 		  						input,
 		  						output,
 				numButtons[7], numButtons[8], numButtons[9], div, fac,backspace, clear,
 				numButtons[4], numButtons[5], numButtons[6], mul, pow, left, right,
-				numButtons[1], numButtons[2], numButtons[3], minus,
-				numButtons[0], equals
+				numButtons[1], numButtons[2], numButtons[3], minus, recursionButton,
+				numButtons[0], equals, plus, hideBinaryButton
 		);
  	}
 

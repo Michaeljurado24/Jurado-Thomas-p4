@@ -11,5 +11,6 @@ public class ClearButton extends Button{
 					input.setText("");
 			});
 			this.setPrefSize(x, y);
+			this.setStyle("-fx-base: #ff751a");
 		}
 }
