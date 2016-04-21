@@ -14,13 +14,19 @@ New Structure
 
 
 //individualButtons
-
-	calcButton-----calcFrame(The buttons)
-				|
-				|
-				|
+					Driver
+					^
+					|
+					|
+					|
+					|
 				Calculator (does the math and stuff )
+				^		
+				|
+				|
+			Various Buttons
 				^
 				|
 				|
-				Math Functions
+				|
+			Recursive/Itarative/Math Classes
