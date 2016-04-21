@@ -23,9 +23,11 @@ public class Calculator extends FlowPane{
 	//attributes
 	private InputLabel input;
 	private OutputLabel output;
-	//
+	
+	//Represent the Actual WIdth of the Window
 	private final double WIDTH = 700;
-	private final double HEIGHT = 30;
+
+	//These represent the desired Height and Width of the normal button
 	private final double BUTTONHEIGHT = 5;
 	private final double BUTTONWIDTH = 100;
 
@@ -53,7 +55,7 @@ public class Calculator extends FlowPane{
 	} // setFormat
 
 	public void setLabels(){
-		input = new InputLabel(WIDTH);//starts out blank
+		input = new InputLabel(WIDTH);
 		output = new OutputLabel(WIDTH);
 	} //set Labels
  
