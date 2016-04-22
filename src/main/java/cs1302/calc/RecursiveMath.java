@@ -67,13 +67,4 @@ public class RecursiveMath implements Math {
     
 
   
-public static void main( String[] args){
-RecursiveMath r = new RecursiveMath();
-System.out.println(r.mul(9, 1));
-System.out.println(r.sub(10000, 1000));
-System.out.println(r.div(9000, 1000));
-System.out.println(r.fac(0));
-System.out.println(r.pow(4, 4));
-//System.out.println(r.mul(200000, 1000));// not accepted.
-}
 } // RecursiveMath

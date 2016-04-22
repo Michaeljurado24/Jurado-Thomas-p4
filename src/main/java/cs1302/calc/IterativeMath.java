@@ -81,13 +81,5 @@ public class IterativeMath implements Math {
         return sum;
     } // pow
 
-    public static void main(String[] args){
-    	IterativeMath i = new IterativeMath();
-    	System.out.println("Add: "+ i.add(99,2));
-    	System.out.println("Subtract: "+ i.sub(80,12));
-    	System.out.println("MULTIPLY: " + i.mul(8,7));
-    	System.out.println("Div"+ i.div(100,2));
-    	System.out.println("power"+ i.pow(3,5));
-      System.out.println("Facts"+ i.fac(6));
-    }
+
 } // IterativeMath

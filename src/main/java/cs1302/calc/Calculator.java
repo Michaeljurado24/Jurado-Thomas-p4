@@ -95,7 +95,12 @@ public class Calculator extends FlowPane{
 
 		//special buttons
 		ClearButton clear = new ClearButton(input, BUTTONWIDTH, BUTTONHEIGHT);
-		EqualsButton equals = new EqualsButton(output, useRecursion, (BUTTONWIDTH*2.17), BUTTONHEIGHT);
+
+		//i hard coded the width in because it looks better and we dont need multiple equals bnuttons
+		//with multiple widths ill probably do the same thing with the others to make the code look neater
+		EqualsButton equals = new EqualsButton(input, output, useRecursion);
+
+
 		BackspaceButton backspace = new BackspaceButton(input, BUTTONWIDTH, BUTTONHEIGHT);
 		backspace.setStyle("-fx-base: #ff751a");
 		BinaryButton hideBinaryButton = new BinaryButton(output, outputInBinary,"Hide Binary",(BUTTONWIDTH*3.4), BUTTONHEIGHT);
