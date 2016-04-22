@@ -18,6 +18,9 @@ import javafx.geometry.Insets;
 //attribute imports
 import javafx.scene.control.Label;
 
+//this will help solve youur recursive button problem
+import javafx.beans.property.SimpleBooleanProperty;
+
 
 public class Calculator extends FlowPane{
 	//attributes
@@ -25,6 +28,9 @@ public class Calculator extends FlowPane{
 	private OutputLabel output;
 	private OutputInBinaryLabel outputInBinary;
 	
+	//RECURRSION
+	private SimpleBooleanProperty useRecursion = new SimpleBooleanProperty(false);
+
 	//Represent the Actual WIdth of the Window
 	private final double WIDTH = 400; // Changed from 700 to 400
 
@@ -89,11 +95,11 @@ public class Calculator extends FlowPane{
 
 		//special buttons
 		ClearButton clear = new ClearButton(input, BUTTONWIDTH, BUTTONHEIGHT);
-		EqualsButton equals = new EqualsButton(input, output, (BUTTONWIDTH*2.17), BUTTONHEIGHT);
+		EqualsButton equals = new EqualsButton(output, useRecursion, (BUTTONWIDTH*2.17), BUTTONHEIGHT);
 		BackspaceButton backspace = new BackspaceButton(input, BUTTONWIDTH, BUTTONHEIGHT);
 		backspace.setStyle("-fx-base: #ff751a");
 		BinaryButton hideBinaryButton = new BinaryButton(output, outputInBinary,"Hide Binary",(BUTTONWIDTH*3.4), BUTTONHEIGHT);
-		RecursionButton recursionButton = new RecursionButton("Use Recursion", (BUTTONWIDTH*3.4), BUTTONHEIGHT);
+		RecursionButton recursionButton = new RecursionButton(useRecursion, (BUTTONWIDTH*3.4), BUTTONHEIGHT);
 		
 		/* Stuffed all the buttons in 'background'. */
 		background.getChildren().addAll(
