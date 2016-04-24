@@ -21,7 +21,7 @@ import javafx.scene.control.Label;
 
 //this will help solve youur recursive button problem
 import javafx.beans.property.SimpleBooleanProperty;
-
+import javafx.beans.property.SimpleIntegerProperty;
 
 public class Calculator extends FlowPane{
 	//attributes
@@ -29,7 +29,10 @@ public class Calculator extends FlowPane{
 	private OutputLabel output;
 	private OutputInBinaryLabel outputInBinary;
 	
-	private SimpleBooleanProperty visualStatus = new SimpleBooleanProperty(false);
+
+	private SimpleIntegerProperty insertIndex = new SimpleIntegerProperty(0);
+
+	private SimpleBooleanProperty visualStatus = new SimpleBooleanProperty(false); //good call
 	
 	//RECURRSION
 	private SimpleBooleanProperty useRecursion = new SimpleBooleanProperty(false);
