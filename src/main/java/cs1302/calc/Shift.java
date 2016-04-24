@@ -5,8 +5,10 @@ import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.scene.control.Label;
+
 public class Shift extends Button{
-	public Shift(boolean leftDirection, SimpleIntegerProperty index, double x, double y ) {
+	public Shift(boolean leftDirection, Label text, SimpleIntegerProperty index, double x, double y ) {
 		super("");
 		if (leftDirection){
 			this.setText("<<");
@@ -24,7 +26,12 @@ public class Shift extends Button{
 
 			} // if
 			else{
-				index.set(current+1);
+				if (current == text.getText().length()){
+					//do nothing
+				}
+				else{
+					index.set(current+1);
+				}
 			} // else
 
 		});

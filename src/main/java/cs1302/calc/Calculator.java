@@ -105,8 +105,8 @@ public class Calculator extends FlowPane{
 		DigitButton minus = new DigitButton(insertIndex, input, "-", BUTTONWIDTH, BUTTONHEIGHT);
 
 
-		Shift left = new Shift(true, insertIndex, BUTTONWIDTH, BUTTONHEIGHT);
-		Shift right = new Shift(false, insertIndex, BUTTONWIDTH, BUTTONHEIGHT);
+		Shift left = new Shift(true, input, insertIndex, BUTTONWIDTH, BUTTONHEIGHT);
+		Shift right = new Shift(false, input, insertIndex, BUTTONWIDTH, BUTTONHEIGHT);
 		//DigitButton left = new DigitButton(insertIndex, input, "<<", BUTTONWIDTH, BUTTONHEIGHT);
 		//DigitButton right = new DigitButton(insertIndex, input, ">>", BUTTONWIDTH, BUTTONHEIGHT);
 
