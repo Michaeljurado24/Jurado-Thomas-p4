@@ -77,7 +77,7 @@ public class Calculator extends FlowPane{
 		this.setHgap(10);
 		this.setPadding(new Insets(10,10,10,10) );
 		this.setPrefWrapLength(WIDTH);
-	    binaryCount = new Text("\n\n63                                                 47                                             32\n  \n31                                                 15                                              0 ");
+	    binaryCount = new Text("\n\n63                                               47                                           32\n  \n31                                               15                                            0 ");
 	    binaryCount.setFill(Color.BLUE);
 	    
 		/* Formating for the other flow pane that's being used for the background */
