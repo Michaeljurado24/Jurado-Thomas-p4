@@ -82,4 +82,14 @@ public class IterativeMath implements Math {
     } // pow
 
 
+    @Override
+    public int lshift(int lhs, int rhs) {
+        return mul(lhs, pow(2, rhs));
+    } // lshift
+
+@Override     
+    public int rshift(int lhs, int rhs) {
+        return div(lhs, pow(2, rhs));
+    } // rshift
+
 } // IterativeMath

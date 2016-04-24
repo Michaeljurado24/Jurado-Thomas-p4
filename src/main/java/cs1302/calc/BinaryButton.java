@@ -1,6 +1,7 @@
 package cs1302.calc;
 
 import javafx.application.Application;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 import javafx.scene.layout.BackgroundFill;
@@ -11,12 +12,21 @@ import javafx.event.EventHandler;
 
 import javafx.scene.control.Label;
 public class BinaryButton extends Button{
-	public BinaryButton(Label result,Label outputInBinary, String symbol,double x, double y ) {
+	private SimpleBooleanProperty status = new SimpleBooleanProperty(true);
+	
+	public BinaryButton(Label result,Label outputInBinary, String symbol,double x, double y, SimpleBooleanProperty status) {
 		super(symbol);
 		
 		this.setOnAction( event -> {
-		/* Call the binary function on output Label here 
-		 * and save the result to the secondary Label ouputInBinary*/
+			if(status.get() == true){
+				status.set(false);	
+			}
+			else{
+				status.set(true);
+			}
+			
+			outputInBinary.setVisible(status.get());
+			
 		});
 
 		this.setPrefSize(x,y);

@@ -60,11 +60,19 @@ public class RecursiveMath implements Math {
     public int pow(int lhs, int rhs){
     	return pow_acc(lhs,lhs,rhs);
     }
+    
     public int pow_acc(int acc, int n, int m) { //idk how i did it, but I did. [Analyze This]
         if( m==1) return acc;
         return pow_acc(mul(acc,n),n,pred(m));
     } // pow
     
+@Override
+    public int lshift(int lhs, int rhs) {
+        return mul(lhs, pow(2, rhs));
+    } // lshift
 
-  
+@Override     
+    public int rshift(int lhs, int rhs) {
+        return div(lhs, pow(2, rhs));
+    } // rshift
 } // RecursiveMath
