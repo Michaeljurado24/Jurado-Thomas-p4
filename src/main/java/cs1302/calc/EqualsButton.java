@@ -2,6 +2,7 @@ package cs1302.calc;
 
 //class imports
 import cs1302.calc.ReversePolishNotation;
+import cs1302.calc.BinaryPane;
 
 //Math Imports
 	/*Recursive*/
@@ -45,10 +46,9 @@ public class EqualsButton extends Button{
 		}
 		return infix;		
 	}	
-	public EqualsButton(Label input, Label output, OutputInBinaryLabel outputInBinary, SimpleBooleanProperty useRecursion){
+	public EqualsButton(BinaryPane binaryPane, Label input, Label output, OutputInBinaryLabel outputInBinary, SimpleBooleanProperty useRecursion){
 		super("="); /* Calls the constructor of the Button parent class and gives it a String input to label the button with. */
 		this.setOnAction( event -> {
-		
 			String infixString = this.getInfixText(input.getText().replace(">>", "A").replace("<<", "B") );
 			infixString = infixString.replace("A", ">>").replace("B", "<<");
 			
@@ -96,7 +96,7 @@ public class EqualsButton extends Button{
 			String resultAsBinaryString = EqualsButton.binaryConversion( Integer.parseInt(result) ); /* converts the integer into binary */
 			 /* substracts a certain number of zeros from the string used by the Label outputInBinary and plugs in the binary value of result in. This should bring the length of the string by to 64. */
 			
-			EqualsButton.newStringForBinaryLabel(resultAsBinaryString, outputInBinary);
+			EqualsButton.newStringForBinaryLabel(resultAsBinaryString, outputInBinary, binaryPane);
 		}
 		
 		});
@@ -111,11 +111,12 @@ public class EqualsButton extends Button{
     
     /* Takes the string of 64 zeros subtracts off the number of zeros equal to the length of the binary number just calculated. 
      * What's left of the String zeros is concatenated with the String mod to make a new string newString.*/
-    static void newStringForBinaryLabel(String mod, OutputInBinaryLabel binaryLabel){
+    static void newStringForBinaryLabel(String mod, OutputInBinaryLabel binaryLabel, BinaryPane pane){
     	String zeros = "0000000000000000000000000000000000000000000000000000000000000000";
     	String partOfOld = zeros.substring(0, (zeros.length() - mod.length()) );
     	
     	String newString = partOfOld + mod;
+    	pane.setChildren(newString);
     	binaryLabel.changeMain( newString);
     	
     }

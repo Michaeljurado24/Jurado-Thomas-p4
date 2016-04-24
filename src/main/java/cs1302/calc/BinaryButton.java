@@ -1,5 +1,7 @@
 package cs1302.calc;
 
+import cs1302.calc.BinaryPane;
+
 import javafx.application.Application;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.scene.control.Button;
@@ -14,7 +16,7 @@ import javafx.scene.control.Label;
 public class BinaryButton extends Button{
 	private SimpleBooleanProperty status = new SimpleBooleanProperty(true);
 	
-	public BinaryButton(Label result,Label outputInBinary, Text counter, String symbol,double x, double y, SimpleBooleanProperty status) {
+	public BinaryButton(BinaryPane pane, Label result,Label outputInBinary, Text counter, String symbol,double x, double y, SimpleBooleanProperty status) {
 		super(symbol);
 		
 		this.setOnAction( event -> {
@@ -26,6 +28,7 @@ public class BinaryButton extends Button{
 			}
 			
 			outputInBinary.setVisible(status.get());
+			pane.setVisible(status.get());
 			counter.setVisible(status.get());
 		});
 

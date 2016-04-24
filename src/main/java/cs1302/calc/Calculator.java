@@ -8,6 +8,7 @@ import cs1302.calc.ClearButton;
 import cs1302.calc.EqualsButton;
 import cs1302.calc.BackspaceButton;
 import cs1302.calc.Shift;
+import cs1302.calc.BinaryPane;
 //formating
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.StackPane;
@@ -25,6 +26,7 @@ import javafx.scene.control.Label;
 //this will help solve youur recursive button problem
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 
 public class Calculator extends FlowPane{
 	//attributes
@@ -33,6 +35,8 @@ public class Calculator extends FlowPane{
 	private OutputInBinaryLabel outputInBinary;
 	private Text binaryCount;
 	
+	private SimpleStringProperty binaryString  = new SimpleStringProperty(
+		"0000000000000000000000000000000000000000000000000000000000000000");
 
 	private SimpleIntegerProperty insertIndex = new SimpleIntegerProperty(0);
 
@@ -122,23 +126,28 @@ public class Calculator extends FlowPane{
 
 		//i hard coded the width in because it looks better and we dont need multiple equals bnuttons
 		//with multiple widths ill probably do the same thing with the others to make the code look neater
-		EqualsButton equals = new EqualsButton(input, output, outputInBinary, useRecursion);
+		//experiment
+
+		BinaryPane pane = new BinaryPane("0000000000000000000000000000000000000000000000000000000000000000", WIDTH);
+		EqualsButton equals = new EqualsButton(pane, input, output, outputInBinary, useRecursion);
 
 
 		BackspaceButton backspace = new BackspaceButton(input, BUTTONWIDTH, BUTTONHEIGHT);
 		backspace.setStyle("-fx-base: #ff751a");
-		BinaryButton hideBinaryButton = new BinaryButton(output, outputInBinary, binaryCount,"Hide Binary",(BUTTONWIDTH*3.4), BUTTONHEIGHT, visualStatus);
+		BinaryButton hideBinaryButton = new BinaryButton(pane, output, outputInBinary, binaryCount,"Hide Binary",(BUTTONWIDTH*3.4), BUTTONHEIGHT, visualStatus);
 		RecursionButton recursionButton = new RecursionButton(useRecursion, (BUTTONWIDTH*3.4), BUTTONHEIGHT);
 		
+
 		theBinaries.getChildren().addAll(outputInBinary,binaryCount);
 		/* Stuffed all the buttons in 'background'. */
 		background.getChildren().addAll(
 				
-								theBinaries,
+								pane,
 				numButtons[7], numButtons[8], numButtons[9], div, fac,backspace, clear,
 				numButtons[4], numButtons[5], numButtons[6], mul, pow, left, right,
 				numButtons[1], numButtons[2], numButtons[3], minus, recursionButton,
 				numButtons[0], equals, plus, hideBinaryButton
+				
 				
 				);
 		
