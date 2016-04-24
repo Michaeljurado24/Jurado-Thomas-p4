@@ -48,40 +48,15 @@ public class EqualsButton extends Button{
 	public EqualsButton(Label input, Label output, OutputInBinaryLabel outputInBinary, SimpleBooleanProperty useRecursion){
 		super("="); /* Calls the constructor of the Button parent class and gives it a String input to label the button with. */
 		this.setOnAction( event -> {
-			
-			/* I instantiated infix and postFix here to give them a wide enough scope to be used inside the for-loop and outside of it. */
-			// String[] infix;
-			// String[] postFix;
-			
-
-			// /*Converts inputLabel to StringList*/
-			// if(input.getText().contains("<<")){ // delete << from the expression replaces it with a letter to serve as a place holder. the string is then turned into a array. The array is searched for the letter. Once the letter is found it's replaced with the << symbol.
-			// 	String inputModified = input.getText().replace("<<", "A");
-			// 	infix = inputModified.split("");
-				
-			// 	/* for loop to search through array, find "A", and replace it with "<<". */
-			// 	for(int q = 0; q < infix.length; q++){
-			// 		if( infix[q].equalsIgnoreCase("A") ){ /* Personal Reminder: .equals() that's called on a String and takes in a String is the only way to compare the value of two strings. String == String does not work. */
-			// 			infix[q] = "<<";
-			// 			break;
-			// 		}
-			// 	}
-				
-			// }
-			// else{
-			
-			// infix = input.getText().split(""); 
-			// }
-
-
+		
 			String infixString = this.getInfixText(input.getText().replace(">>", "A").replace("<<", "B") );
 			infixString = infixString.replace("A", ">>").replace("B", "<<");
-			System.out.println("Infec string" + infixString);
+			
 
 			String[] infix = infixString.split(" "); //thank god this works
 			String[] postFix = ReversePolishNotation.infixToPostfix(infix);
 			
-			// thank god this works
+		// thank god this works
 			
 			/*
 			 *  Jarrad: This splits the expression where ever a "" is located. 
@@ -92,32 +67,37 @@ public class EqualsButton extends Button{
 			
 			postFix = ReversePolishNotation.infixToPostfix(infix);
 			
-			// for(String i: infix){
-			// 	System.out.println("infx"+infix);
-			// }
-			// for(String p: postFix){
-			// 	System.out.println("postfix"+p);
-			// }
-			System.out.println("useRecursion: " + useRecursion.get());
-			/*method calls go here */
-			int result;
+			String result;
 			if (useRecursion.get() == true){
 				/*call reecursive methods */
+				try{
+					result = ""+ ReversePolishNotation.evaluate( new RecursiveMath(),postFix);
+				} catch (MalformedPostfixException e){
 
-				result = ReversePolishNotation.evaluate( new RecursiveMath(),postFix);
-
+					result = "ErOr";
+				}
 
 			}
 			else{
 				//*call iteratiive or whateever */
-				result = ReversePolishNotation.evaluate( new IterativeMath(),postFix);
+				try{
+					result = ""+ ReversePolishNotation.evaluate( new IterativeMath(),postFix);
+				} catch (MalformedPostfixException e){
+					result = "ErOr";
+				}
 			}
-			output.setText(""+result);
-			
-			String resultAsBinaryString = EqualsButton.binaryConversion(result); /* converts the integer into binary */
+			output.setText(result);
+			if (result.equals("Eror") ){
+				//do nothing
+			}
+			else{
+	//		System.out.println(result.parseInt());
+
+			String resultAsBinaryString = EqualsButton.binaryConversion( Integer.parseInt(result) ); /* converts the integer into binary */
 			 /* substracts a certain number of zeros from the string used by the Label outputInBinary and plugs in the binary value of result in. This should bring the length of the string by to 64. */
 			
 			EqualsButton.newStringForBinaryLabel(resultAsBinaryString, outputInBinary);
+		}
 		
 		});
 
