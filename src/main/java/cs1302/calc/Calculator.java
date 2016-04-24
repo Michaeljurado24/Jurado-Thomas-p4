@@ -11,6 +11,7 @@ import cs1302.calc.BackspaceButton;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.paint.Color;
 import javafx.geometry.Orientation;
+import javafx.geometry.Pos;
 import javafx.geometry.Insets;
 
 
@@ -27,6 +28,8 @@ public class Calculator extends FlowPane{
 	private InputLabel input;
 	private OutputLabel output;
 	private OutputInBinaryLabel outputInBinary;
+	
+	private SimpleBooleanProperty visualStatus = new SimpleBooleanProperty(false);
 	
 	//RECURRSION
 	private SimpleBooleanProperty useRecursion = new SimpleBooleanProperty(false);
@@ -55,6 +58,12 @@ public class Calculator extends FlowPane{
 		
 	}
 
+	public String conversionToBinary(Label o){
+		int decimalValue = Integer.parseInt(o.getText());
+		String binaryForm = Integer.toBinaryString(decimalValue);
+		return binaryForm;
+	}
+	
 	public void setFormat(){
 		/* Formating for the main FlowPane */
 		this.setVgap(20);
@@ -73,7 +82,7 @@ public class Calculator extends FlowPane{
 	public void setLabels(){
 		input = new InputLabel(WIDTH);
 		output = new OutputLabel(WIDTH);
-		outputInBinary = new OutputInBinaryLabel(WIDTH);
+		outputInBinary = new OutputInBinaryLabel("0000000000000000000000000000000000000000000000000000000000000000",WIDTH);
 		background = new FlowPane(Orientation.HORIZONTAL);
 	} //set Labels
  
@@ -98,12 +107,12 @@ public class Calculator extends FlowPane{
 
 		//i hard coded the width in because it looks better and we dont need multiple equals bnuttons
 		//with multiple widths ill probably do the same thing with the others to make the code look neater
-		EqualsButton equals = new EqualsButton(input, output, useRecursion);
+		EqualsButton equals = new EqualsButton(input, output, outputInBinary, useRecursion);
 
 
 		BackspaceButton backspace = new BackspaceButton(input, BUTTONWIDTH, BUTTONHEIGHT);
 		backspace.setStyle("-fx-base: #ff751a");
-		BinaryButton hideBinaryButton = new BinaryButton(output, outputInBinary,"Hide Binary",(BUTTONWIDTH*3.4), BUTTONHEIGHT);
+		BinaryButton hideBinaryButton = new BinaryButton(output, outputInBinary,"Hide Binary",(BUTTONWIDTH*3.4), BUTTONHEIGHT, visualStatus);
 		RecursionButton recursionButton = new RecursionButton(useRecursion, (BUTTONWIDTH*3.4), BUTTONHEIGHT);
 		
 		/* Stuffed all the buttons in 'background'. */
@@ -125,4 +134,5 @@ public class Calculator extends FlowPane{
 		);
  	}
 
+ 
 }
