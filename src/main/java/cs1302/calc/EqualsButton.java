@@ -66,7 +66,7 @@ public class EqualsButton extends Button{
 			 *  */
 			
 			postFix = ReversePolishNotation.infixToPostfix(infix);
-			
+			System.out.println("Postfix: " + infixString);
 			String result;
 			if (useRecursion.get() == true){
 				/*call reecursive methods */
