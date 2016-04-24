@@ -10,7 +10,9 @@ import cs1302.calc.BackspaceButton;
 import cs1302.calc.Shift;
 //formating
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.geometry.Insets;
@@ -29,6 +31,7 @@ public class Calculator extends FlowPane{
 	private InputLabel input;
 	private OutputLabel output;
 	private OutputInBinaryLabel outputInBinary;
+	private Text binaryCount;
 	
 
 	private SimpleIntegerProperty insertIndex = new SimpleIntegerProperty(0);
@@ -46,7 +49,7 @@ public class Calculator extends FlowPane{
 	private final double BUTTONWIDTH = 50;// Changed from 100 to 50
 	
 	private FlowPane background;
-
+	private StackPane theBinaries;
 	//constructor
 	public Calculator(){
 		super(Orientation.HORIZONTAL);
@@ -74,7 +77,9 @@ public class Calculator extends FlowPane{
 		this.setHgap(10);
 		this.setPadding(new Insets(10,10,10,10) );
 		this.setPrefWrapLength(WIDTH);
-		
+	    binaryCount = new Text("\n\n63                                                 47                                             32\n  \n31                                                 15                                              0 ");
+	    binaryCount.setFill(Color.BLUE);
+	    
 		/* Formating for the other flow pane that's being used for the background */
 		background.setVgap(20);
 		background.setHgap(10);
@@ -88,6 +93,8 @@ public class Calculator extends FlowPane{
 		output = new OutputLabel(WIDTH);
 		outputInBinary = new OutputInBinaryLabel("0000000000000000000000000000000000000000000000000000000000000000",WIDTH);
 		background = new FlowPane(Orientation.HORIZONTAL);
+		theBinaries = new StackPane();
+		theBinaries.setAlignment(Pos.CENTER_LEFT);
 	} //set Labels
  
  	public void addButtons(){
@@ -120,13 +127,14 @@ public class Calculator extends FlowPane{
 
 		BackspaceButton backspace = new BackspaceButton(insertIndex, input, BUTTONWIDTH, BUTTONHEIGHT);
 		backspace.setStyle("-fx-base: #ff751a");
-		BinaryButton hideBinaryButton = new BinaryButton(output, outputInBinary,"Hide Binary",(BUTTONWIDTH*3.4), BUTTONHEIGHT, visualStatus);
+		BinaryButton hideBinaryButton = new BinaryButton(output, outputInBinary, binaryCount,"Hide Binary",(BUTTONWIDTH*3.4), BUTTONHEIGHT, visualStatus);
 		RecursionButton recursionButton = new RecursionButton(useRecursion, (BUTTONWIDTH*3.4), BUTTONHEIGHT);
 		
+		theBinaries.getChildren().addAll(outputInBinary,binaryCount);
 		/* Stuffed all the buttons in 'background'. */
 		background.getChildren().addAll(
 				
-					outputInBinary,
+								theBinaries,
 				numButtons[7], numButtons[8], numButtons[9], div, fac,backspace, clear,
 				numButtons[4], numButtons[5], numButtons[6], mul, pow, left, right,
 				numButtons[1], numButtons[2], numButtons[3], minus, recursionButton,

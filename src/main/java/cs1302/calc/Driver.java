@@ -9,6 +9,8 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.stage.Stage;
 import java.io.IOException;
@@ -34,8 +36,14 @@ public class Driver extends Application {
  //        primaryStage.setTitle("CalcFX!");
 	// primaryStage.setScene(new Scene(root, 640, 480));
  //        primaryStage.show();
+    primaryStage.setTitle(" Programmar's Calculator ");
+    Group biggerRoot = new Group();
+    
 
+    
     Calculator root = new Calculator();
+    
+//    biggerRoot.getChildren().addAll(root,binaryCount);
     Scene scene = new Scene(root);
     primaryStage.setScene(scene);
     primaryStage.show();
