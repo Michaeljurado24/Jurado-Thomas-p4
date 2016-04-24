@@ -93,32 +93,32 @@ public class Calculator extends FlowPane{
  	public void addButtons(){
 		DigitButton[] numButtons = new DigitButton[10];
 		for(int i = 0; i< 10; i++) {
-			numButtons[i] = new DigitButton(insertIndex, input, Integer.toString(i),BUTTONWIDTH, 
+			numButtons[i] = new DigitButton(input, Integer.toString(i),BUTTONWIDTH, 
 											BUTTONHEIGHT);
 		}// CalcButtons
 
-		DigitButton div = new DigitButton(insertIndex, input, "/", BUTTONWIDTH, BUTTONHEIGHT);	
-		DigitButton fac = new DigitButton(insertIndex, input, "!", BUTTONWIDTH, BUTTONHEIGHT);
-		DigitButton mul = new DigitButton(insertIndex, input, "*", BUTTONWIDTH, BUTTONHEIGHT);
-		DigitButton plus = new DigitButton(insertIndex, input, "+", BUTTONWIDTH, BUTTONHEIGHT);
-		DigitButton pow = new DigitButton(insertIndex, input, "^", BUTTONWIDTH, BUTTONHEIGHT);
-		DigitButton minus = new DigitButton(insertIndex, input, "-", BUTTONWIDTH, BUTTONHEIGHT);
+		DigitButton div = new DigitButton(input, "/", BUTTONWIDTH, BUTTONHEIGHT);	
+		DigitButton fac = new DigitButton(input, "!", BUTTONWIDTH, BUTTONHEIGHT);
+		DigitButton mul = new DigitButton(input, "*", BUTTONWIDTH, BUTTONHEIGHT);
+		DigitButton plus = new DigitButton(input, "+", BUTTONWIDTH, BUTTONHEIGHT);
+		DigitButton pow = new DigitButton(input, "^", BUTTONWIDTH, BUTTONHEIGHT);
+		DigitButton minus = new DigitButton(input, "-", BUTTONWIDTH, BUTTONHEIGHT);
 
 
 		//Shift left = new Shift(true, input, insertIndex, BUTTONWIDTH, BUTTONHEIGHT);
 		//Shift right = new Shift(false, input, insertIndex, BUTTONWIDTH, BUTTONHEIGHT);
-		DigitButton left = new DigitButton(insertIndex, input, "<<", BUTTONWIDTH, BUTTONHEIGHT);
-		DigitButton right = new DigitButton(insertIndex, input, ">>", BUTTONWIDTH, BUTTONHEIGHT);
+		DigitButton left = new DigitButton(input, "<<", BUTTONWIDTH, BUTTONHEIGHT);
+		DigitButton right = new DigitButton(input, ">>", BUTTONWIDTH, BUTTONHEIGHT);
 
 		//special buttons
-		ClearButton clear = new ClearButton(insertIndex, input, BUTTONWIDTH, BUTTONHEIGHT);
+		ClearButton clear = new ClearButton(input, BUTTONWIDTH, BUTTONHEIGHT);
 
 		//i hard coded the width in because it looks better and we dont need multiple equals bnuttons
 		//with multiple widths ill probably do the same thing with the others to make the code look neater
 		EqualsButton equals = new EqualsButton(input, output, outputInBinary, useRecursion);
 
 
-		BackspaceButton backspace = new BackspaceButton(insertIndex, input, BUTTONWIDTH, BUTTONHEIGHT);
+		BackspaceButton backspace = new BackspaceButton(input, BUTTONWIDTH, BUTTONHEIGHT);
 		backspace.setStyle("-fx-base: #ff751a");
 		BinaryButton hideBinaryButton = new BinaryButton(output, outputInBinary,"Hide Binary",(BUTTONWIDTH*3.4), BUTTONHEIGHT, visualStatus);
 		RecursionButton recursionButton = new RecursionButton(useRecursion, (BUTTONWIDTH*3.4), BUTTONHEIGHT);
