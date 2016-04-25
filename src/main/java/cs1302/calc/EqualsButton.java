@@ -69,7 +69,7 @@ public class EqualsButton extends Button{
 	
 	/**
 	 * 
-	 * The EqualsButton constructor takes in a BinaryPane object, two Label objects, an OutputInBinaryLabel object, and SimpleBooleanProperty object.
+	 * The EqualsButton constructor takes in a BinaryPane object, two Label objects, and SimpleBooleanProperty object.
 	 * The button's constructor has a predefined label, width, color, and setOnAction method.
 	 * When the button is clicked, the contents of the Label input is ran through the getInfixText() method.  The string taken from the input Label is now in
 	 * infix notation and saved as the String infixString. infixString is converted into an array of Strings. That array is saved under a unary array called String[] infix.
@@ -89,7 +89,7 @@ public class EqualsButton extends Button{
 	 * @param outputInBinary
 	 * @param useRecursion
 	 */
-	public EqualsButton(BinaryPane binaryPane, Label input, Label output, OutputInBinaryLabel outputInBinary, SimpleBooleanProperty useRecursion){
+	public EqualsButton(BinaryPane binaryPane, Label input, Label output, SimpleBooleanProperty useRecursion){
 		super("="); /* Calls the constructor of the Button parent class and gives it a String input to label the button with. */
 		this.setOnAction( event -> {
 			String infixString = this.getInfixText(input.getText().replace(">>", "A").replace("<<", "B") );
@@ -131,7 +131,7 @@ public class EqualsButton extends Button{
 			String resultAsBinaryString = EqualsButton.binaryConversion( Integer.parseInt(result) ); /* converts the integer into binary */
 			 /* substracts a certain number of zeros from the string used by the Label outputInBinary and plugs in the binary value of result in. This should bring the length of the string by to 64. */
 			
-			EqualsButton.newStringForBinaryLabel(resultAsBinaryString, outputInBinary, binaryPane);
+			EqualsButton.newStringForBinaryLabel(resultAsBinaryString, binaryPane);
 		}
 		
 		});
@@ -155,19 +155,23 @@ public class EqualsButton extends Button{
      * 
      * This method takes in a String object, a OutputInBinaryLabel object, and BinaryPane object. 
      * The method creates a String called zeros. Zeros holds a string of 64 zeros. The String mod holds a string created by the user.
+     * A String called partOfOld is created. The contents of partOfOld will always be some bit of String zeros with a complementary number of 
+     * zeros subtracted equal to the length of the String mod. 
      * 
+     * String partOfOld is then concatenaed with String mod and stored in the new defined String newString. 
+     * The content's of the BinaryPane object is set equal to String newString.
      * 
      * @param mod
      * @param binaryLabel
      * @param pane
      */
-    static void newStringForBinaryLabel(String mod, OutputInBinaryLabel binaryLabel, BinaryPane pane){
+    static void newStringForBinaryLabel(String mod, BinaryPane pane){
     	String zeros = "0000000000000000000000000000000000000000000000000000000000000000";
     	String partOfOld = zeros.substring(0, (zeros.length() - mod.length()) );
     	
     	String newString = partOfOld + mod;
     	pane.setChildren(newString);
-    	binaryLabel.changeMain( newString);
+    	
     	
     }
 }

@@ -5,7 +5,26 @@ import javafx.scene.layout.Background;
 import javafx.beans.property.SimpleBooleanProperty;
 
 import javafx.scene.control.Label;
+
+/**
+ * 
+ * @author Michael Jurado
+ *
+ */
 public class RecursionButton extends Button{
+	/**
+	 * 
+	 * The Recursion Button extends the Button class. This Button takes in a SimpleBooleanProperty and two doubles and has a predefined color and dimensions.
+	 * These three parameters are used in the lambda expression found in the setOnAction method of the button.
+	 * 
+	 * If the button is clicked the program runs through and if-else statement to check if the the value of the SimpleBoolean
+	 * has been changed from true to false. If true, the calculator switches to using its recursive methods for calculations.
+	 * If false the calculator continue to use generic iterative expressions.
+	 * 
+	 * @param useRecursion
+	 * @param x
+	 * @param y
+	 */
 	public RecursionButton(SimpleBooleanProperty useRecursion, double x, double y ) {
 		super("Use Recursion");
 		this.setOnAction( event -> {
@@ -16,12 +35,7 @@ public class RecursionButton extends Button{
 		else{
 			useRecursion.set(true);
 		}
-		/* When this button is pressed, the add, substract, multiply, divide, power, and factorial button's have
-		 * their setOnAction()'s switched to the recursive definition...So I'm guessing this means we might as well
-		 * add six Button parameters to the parameter list that way we can recode the buttons in this one lambda expression.*/
-
-		//Please Read this: no set aactions need to be chhanged. Take a llook at the equuals Buttton and the neew simpleBooleanProperty. 
-		});
+	});
 
 		this.setPrefSize(x,y);
 		this.setStyle("-fx-base: #8080ff"); 

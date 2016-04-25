@@ -25,7 +25,7 @@ public class BinaryButton extends Button{
 	/**
 	 * 
 	 * The BinaryButton extends the button class to create a new button who's label, width, height, and color are predefined.
-	 *  Every time the button is clicked the button sets the .setVisibility property of the OutputInBinaryLabel object , Text object and BiaryPane object to false or true.
+	 *  Every time the button is clicked the button sets the .setVisibility property of the BiaryPane object to false or true.
 	 *  
 	 * 
 	 * @param pane
@@ -37,7 +37,7 @@ public class BinaryButton extends Button{
 	 * @param y
 	 * @param status
 	 */
-	public BinaryButton(BinaryPane pane, Label result,Label outputInBinary, Text counter, String symbol,double x, double y, SimpleBooleanProperty status) {
+	public BinaryButton(BinaryPane pane, Label result, String symbol,double x, double y, SimpleBooleanProperty status) {
 		super(symbol);
 		
 		this.setOnAction( event -> {
@@ -48,9 +48,9 @@ public class BinaryButton extends Button{
 				status.set(true);
 			}
 			
-			outputInBinary.setVisible(status.get());
+			
 			pane.setVisible(status.get());
-			counter.setVisible(status.get());
+			
 		});
 
 		this.setPrefSize(x,y);

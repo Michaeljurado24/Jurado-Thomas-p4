@@ -32,7 +32,6 @@ public class Calculator extends FlowPane{
 	//attributes
 	private InputLabel input;
 	private OutputLabel output;
-	private OutputInBinaryLabel outputInBinary;
 	private Text binaryCount;
 	
 	private SimpleStringProperty binaryString  = new SimpleStringProperty(
@@ -95,7 +94,7 @@ public class Calculator extends FlowPane{
 	public void setLabels(){
 		input = new InputLabel(WIDTH);
 		output = new OutputLabel(WIDTH);
-		outputInBinary = new OutputInBinaryLabel("0000000000000000000000000000000000000000000000000000000000000000",WIDTH);
+
 		background = new FlowPane(Orientation.HORIZONTAL);
 		theBinaries = new StackPane();
 		theBinaries.setAlignment(Pos.CENTER_LEFT);
@@ -129,16 +128,16 @@ public class Calculator extends FlowPane{
 		//experiment
 
 		BinaryPane pane = new BinaryPane("0000000000000000000000000000000000000000000000000000000000000000", WIDTH);
-		EqualsButton equals = new EqualsButton(pane, input, output, outputInBinary, useRecursion);
+		EqualsButton equals = new EqualsButton(pane, input, output,useRecursion);
 
 
 		BackspaceButton backspace = new BackspaceButton(input, BUTTONWIDTH, BUTTONHEIGHT);
 		backspace.setStyle("-fx-base: #ff751a");
-		BinaryButton hideBinaryButton = new BinaryButton(pane, output, outputInBinary, binaryCount,"Hide Binary",(BUTTONWIDTH*3.4), BUTTONHEIGHT, visualStatus);
+		BinaryButton hideBinaryButton = new BinaryButton(pane, output, "Hide Binary",(BUTTONWIDTH*3.4), BUTTONHEIGHT, visualStatus);
 		RecursionButton recursionButton = new RecursionButton(useRecursion, (BUTTONWIDTH*3.4), BUTTONHEIGHT);
 		
 
-		theBinaries.getChildren().addAll(outputInBinary,binaryCount);
+
 		/* Stuffed all the buttons in 'background'. */
 		background.getChildren().addAll(
 				
