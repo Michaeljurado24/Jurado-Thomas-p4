@@ -13,9 +13,30 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
 import javafx.scene.control.Label;
+
+/**
+ * 
+ * @author Michael Jurado
+ *
+ */
 public class BinaryButton extends Button{
+
 	private SimpleBooleanProperty status = new SimpleBooleanProperty(true);
-	
+	/**
+	 * 
+	 * The BinaryButton extends the button class to create a new button who's label, width, height, and color are predefined.
+	 *  Every time the button is clicked the button sets the .setVisibility property of the OutputInBinaryLabel object , Text object and BiaryPane object to false or true.
+	 *  
+	 * 
+	 * @param pane
+	 * @param result
+	 * @param outputInBinary
+	 * @param counter
+	 * @param symbol
+	 * @param x
+	 * @param y
+	 * @param status
+	 */
 	public BinaryButton(BinaryPane pane, Label result,Label outputInBinary, Text counter, String symbol,double x, double y, SimpleBooleanProperty status) {
 		super(symbol);
 		
