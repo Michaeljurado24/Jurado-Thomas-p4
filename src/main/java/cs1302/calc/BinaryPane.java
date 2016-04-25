@@ -85,7 +85,7 @@ public class BinaryPane  extends FlowPane{
 
 	public void setFormat(){
 		this.setVgap(2);
-		this.setHgap(25);
+		this.setHgap(20);
 		this.setPadding(new Insets(10,10,10,10) );
 		this.setPrefWrapLength(WIDTH);		
 	}
