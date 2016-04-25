@@ -28,16 +28,22 @@ import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
+
+/*A class which holds the buttons and the binary, input, and decimal output "screens"
+*/
 public class Calculator extends FlowPane{
 	//attributes
 	private InputLabel input;
 	private OutputLabel output;
+<<<<<<< HEAD
 	private Text binaryCount;
 	
 	private SimpleStringProperty binaryString  = new SimpleStringProperty(
 		"0000000000000000000000000000000000000000000000000000000000000000");
 
 	private SimpleIntegerProperty insertIndex = new SimpleIntegerProperty(0);
+=======
+>>>>>>> fac3274c12ba0944d86524935ffaf9f157ecc321
 
 	private SimpleBooleanProperty visualStatus = new SimpleBooleanProperty(false); //good call
 	
@@ -52,7 +58,6 @@ public class Calculator extends FlowPane{
 	private final double BUTTONWIDTH = 50;// Changed from 100 to 50
 	
 	private FlowPane background;
-	private StackPane theBinaries;
 	//constructor
 	public Calculator(){
 		super(Orientation.HORIZONTAL);
@@ -68,11 +73,11 @@ public class Calculator extends FlowPane{
 		
 	}
 
-	public String conversionToBinary(Label o){
-		int decimalValue = Integer.parseInt(o.getText());
-		String binaryForm = Integer.toBinaryString(decimalValue);
-		return binaryForm;
-	}
+	// public String conversionToBinary(Label o){
+	// 	int decimalValue = Integer.parseInt(o.getText());
+	// 	String binaryForm = Integer.toBinaryString(decimalValue);
+	// 	return binaryForm;
+	// }
 	
 	public void setFormat(){
 		/* Formating for the main FlowPane */
@@ -80,8 +85,6 @@ public class Calculator extends FlowPane{
 		this.setHgap(10);
 		this.setPadding(new Insets(10,10,10,10) );
 		this.setPrefWrapLength(WIDTH);
-	    binaryCount = new Text("\n\n63                                               47                                           32\n  \n31                                               15                                            0 ");
-	    binaryCount.setFill(Color.BLUE);
 	    
 		/* Formating for the other flow pane that's being used for the background */
 		background.setVgap(20);
@@ -93,11 +96,13 @@ public class Calculator extends FlowPane{
 
 	public void setLabels(){
 		input = new InputLabel(WIDTH);
+<<<<<<< HEAD
 		output = new OutputLabel(WIDTH);
 
+=======
+		output = new OutputLabel(WIDTH);	
+>>>>>>> fac3274c12ba0944d86524935ffaf9f157ecc321
 		background = new FlowPane(Orientation.HORIZONTAL);
-		theBinaries = new StackPane();
-		theBinaries.setAlignment(Pos.CENTER_LEFT);
 	} //set Labels
  
  	public void addButtons(){
@@ -128,16 +133,27 @@ public class Calculator extends FlowPane{
 		//experiment
 
 		BinaryPane pane = new BinaryPane("0000000000000000000000000000000000000000000000000000000000000000", WIDTH);
+<<<<<<< HEAD
 		EqualsButton equals = new EqualsButton(pane, input, output,useRecursion);
+=======
+		EqualsButton equals = new EqualsButton(pane, input, output, useRecursion);
+>>>>>>> fac3274c12ba0944d86524935ffaf9f157ecc321
 
 
 		BackspaceButton backspace = new BackspaceButton(input, BUTTONWIDTH, BUTTONHEIGHT);
 		backspace.setStyle("-fx-base: #ff751a");
+<<<<<<< HEAD
 		BinaryButton hideBinaryButton = new BinaryButton(pane, output, "Hide Binary",(BUTTONWIDTH*3.4), BUTTONHEIGHT, visualStatus);
 		RecursionButton recursionButton = new RecursionButton(useRecursion, (BUTTONWIDTH*3.4), BUTTONHEIGHT);
 		
 
 
+=======
+		BinaryButton hideBinaryButton = new BinaryButton(pane, output,"Hide Binary",(BUTTONWIDTH*3.4), BUTTONHEIGHT, visualStatus);
+		RecursionButton recursionButton = new RecursionButton(useRecursion, (BUTTONWIDTH*3.4), BUTTONHEIGHT);
+		
+
+>>>>>>> fac3274c12ba0944d86524935ffaf9f157ecc321
 		/* Stuffed all the buttons in 'background'. */
 		background.getChildren().addAll(
 				
