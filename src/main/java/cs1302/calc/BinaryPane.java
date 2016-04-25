@@ -30,6 +30,7 @@ public class BinaryPane  extends FlowPane{
 		while ( i < binaryString.length()) {
 
 			VBox flow = new VBox();
+			flow.setPrefWidth(45);
 			Label label = new Label("");
 			flow.getChildren().add(label);
 
@@ -84,8 +85,8 @@ public class BinaryPane  extends FlowPane{
 
 
 	public void setFormat(){
-		this.setVgap(2);
-		this.setHgap(20);
+		this.setVgap(0);
+		this.setHgap(0);
 		this.setPadding(new Insets(10,10,10,10) );
 		this.setPrefWrapLength(WIDTH);		
 	}
