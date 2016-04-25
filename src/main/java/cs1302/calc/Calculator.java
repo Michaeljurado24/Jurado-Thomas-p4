@@ -35,15 +35,14 @@ public class Calculator extends FlowPane{
 	//attributes
 	private InputLabel input;
 	private OutputLabel output;
-<<<<<<< HEAD
+
 	private Text binaryCount;
 	
 	private SimpleStringProperty binaryString  = new SimpleStringProperty(
 		"0000000000000000000000000000000000000000000000000000000000000000");
 
 	private SimpleIntegerProperty insertIndex = new SimpleIntegerProperty(0);
-=======
->>>>>>> fac3274c12ba0944d86524935ffaf9f157ecc321
+
 
 	private SimpleBooleanProperty visualStatus = new SimpleBooleanProperty(false); //good call
 	
@@ -96,12 +95,12 @@ public class Calculator extends FlowPane{
 
 	public void setLabels(){
 		input = new InputLabel(WIDTH);
-<<<<<<< HEAD
+
 		output = new OutputLabel(WIDTH);
 
-=======
+
 		output = new OutputLabel(WIDTH);	
->>>>>>> fac3274c12ba0944d86524935ffaf9f157ecc321
+
 		background = new FlowPane(Orientation.HORIZONTAL);
 	} //set Labels
  
@@ -133,27 +132,22 @@ public class Calculator extends FlowPane{
 		//experiment
 
 		BinaryPane pane = new BinaryPane("0000000000000000000000000000000000000000000000000000000000000000", WIDTH);
-<<<<<<< HEAD
+
 		EqualsButton equals = new EqualsButton(pane, input, output,useRecursion);
-=======
-		EqualsButton equals = new EqualsButton(pane, input, output, useRecursion);
->>>>>>> fac3274c12ba0944d86524935ffaf9f157ecc321
+
+
 
 
 		BackspaceButton backspace = new BackspaceButton(input, BUTTONWIDTH, BUTTONHEIGHT);
 		backspace.setStyle("-fx-base: #ff751a");
-<<<<<<< HEAD
+
 		BinaryButton hideBinaryButton = new BinaryButton(pane, output, "Hide Binary",(BUTTONWIDTH*3.4), BUTTONHEIGHT, visualStatus);
 		RecursionButton recursionButton = new RecursionButton(useRecursion, (BUTTONWIDTH*3.4), BUTTONHEIGHT);
 		
 
-
-=======
-		BinaryButton hideBinaryButton = new BinaryButton(pane, output,"Hide Binary",(BUTTONWIDTH*3.4), BUTTONHEIGHT, visualStatus);
-		RecursionButton recursionButton = new RecursionButton(useRecursion, (BUTTONWIDTH*3.4), BUTTONHEIGHT);
 		
 
->>>>>>> fac3274c12ba0944d86524935ffaf9f157ecc321
+
 		/* Stuffed all the buttons in 'background'. */
 		background.getChildren().addAll(
 				
